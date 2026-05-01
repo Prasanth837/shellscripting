@@ -8,3 +8,4 @@ elif [ number -eq 20 ] then
 echo "Provided $number is equal to 20"
 else
 echo "Provided $number is less than 20"
+fi
