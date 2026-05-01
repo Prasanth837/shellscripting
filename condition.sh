@@ -2,9 +2,9 @@
 
 number=$1
 
-if [ $number -gt 20 ] then
+if [ $number -gt 20 ]; then
 echo "Provided $number is greater than 20"
-elif [ $number -eq 20 ] then
+elif [ $number -eq 20 ]; then
 echo "Provided $number is equal to 20"
 else
 echo "Provided $number is less than 20"
