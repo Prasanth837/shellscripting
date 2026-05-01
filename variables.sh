@@ -1,7 +1,7 @@
 #!/bin/bash
 
-name="Prasanth"
-age="30"
+name;
+age;
 
 echo "My name is $name "
 echo "My age is $age"
