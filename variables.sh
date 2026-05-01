@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Provide your name"
+echo "Provide your username"
 read name
 echo "My name is $name "
 
-echo "Provide your age"
-read age
-echo "My age is $age"
+echo "Provide your password"
+read -s PASSWORD
+echo "My password is $PASSWORD"
