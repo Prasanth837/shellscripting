@@ -6,4 +6,4 @@ echo "My name is $name "
 
 echo "Provide your password"
 read -s PASSWORD
-echo "My password is $PASSWORD"
+
