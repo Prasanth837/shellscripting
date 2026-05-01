@@ -1,5 +1,4 @@
 #!/bin/bash
 
-echo "Provide your username"
-read 
-echo "My name is $REPLY "
+read -p "Enter your age: " age
+echo "Age: $age"
