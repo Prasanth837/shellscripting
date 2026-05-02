@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FOLDER="/var/log/shellscript"
-LOG_FILE="/var/log/shellscript/$0.file"
+LOG_FILE="/var/log/shellscript/$0.log"
 
 userid=$(id -u)
 
@@ -23,11 +23,11 @@ if [ $1 -ne 0 ]; then
 fi 
 }
 
-dnf install nodejs -y & >> $LOG_FILE
+dnf install nodejs -y &>> $LOG_FILE
 validate $? "Installation of Nodejs"
 
-dnf install mysql & >> $LOG_FILE
+dnf install mysql &>> $LOG_FILE
 validate $? "Installation of mysql"
 
-dnf install nginx & >> $LOG_FILE
+dnf install nginx &>> $LOG_FILE
 validate $? "Installation of nginx"
