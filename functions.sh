@@ -19,11 +19,11 @@ fi
 }
 
 dnf install nodejs -y
-validate() $! "Installation of Nodejs"
+validate() $? "Installation of Nodejs"
 
 dnf install mysql
-validate() $! "Installation of mysql"
+validate() $? "Installation of mysql"
 
 dnf install nginx
-validate() $! "Installation of nginx"
+validate() $? "Installation of nginx"
 
