@@ -1,7 +1,8 @@
 #!/bin/bash
 
-userid=(id -u)
-if [ userid -ne 0]; then
+userid=$(id -u)
+
+if [ $userid -ne 0]; then
     echo "User should be root install packages"
     exit 1
     else
