@@ -11,10 +11,10 @@ N="\e[0m"   #Normal black colour
 userid=$(id -u)
 
 if [ $userid -ne 0 ]; then
-    echo "$R User should be root install packages $N" | tee -a $LOG_FILE
+    echo -e "$R User should be root install packages $N" | tee -a $LOG_FILE
     exit 1
     else
-    echo "$G User has root privileges $N" | tee -a $LOG_FILE
+    echo -e "$G User has root privileges $N" | tee -a $LOG_FILE
 fi
 
 mkdir -p $LOG_FOLDER
@@ -32,10 +32,10 @@ for package in $@ #We pass data as arguements while executing this script exampl
 do
     dnf list installed $package &>> $LOG_FILE
     if [ $? -ne 0 ]; then
-        echo "$package not installed, $Y Installing now $N "
+        echo -e "$package not installed, $Y Installing now $N "
         dnf install $package -y &>> $LOG_FILE
         validate $? "$package installation"
     else
-        echo "$package already installed, $B skipping it $N "
+        echo -e "$package already installed, $B skipping it $N "
     fi
 done
