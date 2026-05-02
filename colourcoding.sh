@@ -11,10 +11,10 @@ N="\e[0m"   #Normal black colour
 userid=$(id -u)
 
 if [ $userid -ne 0 ]; then
-    echo -e "$R User should be root install packages $N" | tee -a $LOG_FILE
+    echo -e " $R User should be root install packages $N " | tee -a $LOG_FILE
     exit 1
     else
-    echo -e "$G User has root privileges $N" | tee -a $LOG_FILE
+    echo -e " $G User has root privileges $N " | tee -a $LOG_FILE
 fi
 
 mkdir -p $LOG_FOLDER
