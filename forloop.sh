@@ -24,7 +24,7 @@ fi
 for package in $@ #We pass data as arguements while executing this script example nginx mysql etc.
 do
     dnf list installed $package &>> $LOG_FILE
-    if [$? -ne 0 ]; then
+    if [ $? -ne 0 ]; then
         echo "$package not installed, Installing now"
         dnf install $package -y &>> $LOG_FILE
         validate $? "$package installation"
