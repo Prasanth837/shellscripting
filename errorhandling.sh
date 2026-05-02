@@ -7,7 +7,7 @@ Y="\e[33m"  #Yellow Colour
 N="\e[0m"   #Normal black colour
 
 set -e
-trap "echo 'Deployment failed! Check logs.'" ERR
+trap 'echo "There is an error in $LINENO, Commnad: $BASH_COMMAND" ERR'
 
 #we should start code with any colour but if we want to end the line with normal colour then give "\e[0m" for normal colour
 
